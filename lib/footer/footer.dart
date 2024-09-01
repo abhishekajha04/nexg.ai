@@ -14,8 +14,8 @@ class _FooterMainState extends State<FooterMain> {
     final width = MediaQuery.of(context).size.width;
     return Column(
       children: [
-        if (width > 1000) const FooterWeB(),
-        if (width <= 1000) const FooterMobile(),
+        if (width > 1001) const FooterWeB(),
+        if (width <= 1001) const FooterMobile(),
       ],
     );
   }
