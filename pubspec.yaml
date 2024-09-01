@@ -64,12 +64,13 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/fonts/
-
+    - assets/images/logo.png
+    - assets/images/hero_image.png
 
 
 
   fonts:
-    - family: BebasNeue
+    - family: CircularStd-Book
       fonts:
         - asset: assets/fonts/CircularStd-Book.ttf
   # An image asset can refer to one or more resolution-specific "variants", see
