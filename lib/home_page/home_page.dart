@@ -12,7 +12,7 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SafeArea(child: Text("NexG.AI")),
+      body: SafeArea(child: Text("NexG.AI Project")),
     );
   }
 }
