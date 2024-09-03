@@ -33,14 +33,34 @@ class _AboutUsWebState extends State<AboutUsWeb> {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [
-        TextCenter(),
-        Aboutus1(),
-        Aboutus2(),
-        AboutUs3(),
-      ],
+      children: [TextCenter(), Aboutus1(), Aboutus2(), AboutUs3(), Aboutus4()],
     );
   }
+}
+
+Widget builtButton1({
+  double height = 65,
+  double width = double.infinity,
+  String textColor = "#000000",
+  String backgroundColor = '#C7E5FA',
+  required String title,
+  String textsize = "#000000",
+  double fsize = 65,
+}) {
+  return Container(
+    color: hexToColor(backgroundColor),
+    height: height,
+    width: width,
+    child: Center(
+        child: Text(
+      title,
+      style: TextStyle(
+        color: hexToColor(textColor),
+        fontFamily: textsize,
+        fontSize: fsize,
+      ),
+    )),
+  );
 }
 
 class TextCenter extends StatelessWidget {
@@ -512,6 +532,18 @@ class AboutUs3 extends StatelessWidget {
                 ),
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.all(35.0),
+              child: builtButton1(
+                textColor: "#FFFFFF",
+                height: 40,
+                width: 180,
+                backgroundColor: '#000000',
+                title: 'Find Your Agency ',
+                fsize: 12,
+                textsize: 'CircularStd-Book',
+              ),
+            )
           ],
         ),
       ),
@@ -596,6 +628,142 @@ class AboutUs33 extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class Aboutus4 extends StatelessWidget {
+  const Aboutus4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.fromLTRB(120, 40, 0, 40),
+        child: Column(
+          children: [
+            const Text(
+              'We Make It Easy for You to Outsource',
+              style: TextStyle(
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 15, 0, 0),
+              child: Container(
+                width: 310,
+                height: 4,
+                color: const Color.fromARGB(255, 55, 181, 245),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    constraints: const BoxConstraints(maxWidth: 500),
+                    child: const Column(
+                      children: [
+                        Text(
+                            'We Help You to Select the Best Software Outsourcing Companies!',
+                            style: TextStyle(
+                              fontSize: 23,
+                              fontWeight: FontWeight.bold,
+                            )),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'For the simple reason that we know the stress of screening trustworthy technology companies will be much reduced if you receive prompt and comprehensive assistance from an independent general directory.',
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 50, 140, 0),
+                    child: Container(
+                      width: 500,
+                      height: 280,
+                      child: Image.asset(
+                        'assets/images/istockphoto-1452604857-612x612.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ));
+  }
+}
+
+class Aboutus44 extends StatelessWidget {
+  const Aboutus44({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.fromLTRB(20, 40, 0, 40),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const Padding(
+              padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+              child: Text(
+                'We Make It Easy for You to Outsource',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                0,
+                30,
+                46,
+                0,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    constraints: const BoxConstraints(maxWidth: 400),
+                    child: const Column(
+                      children: [
+                        Text(
+                            'We Help You to Select the Best Software Outsourcing Companies!',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            )),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Text(
+                          'For the simple reason that we know the stress of screening trustworthy technology companies will be much reduced if you receive prompt and comprehensive assistance from an independent general directory.',
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 50, 0, 0),
+                    child: Container(
+                      width: 480,
+                      height: 280,
+                      color: Colors.black,
+                      child: Image.asset(
+                        'assets/images/istockphoto-1452604857-612x612.jpg',
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ));
   }
 }
 
@@ -780,7 +948,13 @@ class _AboutUsMobileState extends State<AboutUsMobile> {
   @override
   Widget build(BuildContext context) {
     return const Column(
-      children: [TextCenter11(), AboutUS11(), Aboutus22(), AboutUs33()],
+      children: [
+        TextCenter11(),
+        AboutUS11(),
+        Aboutus22(),
+        AboutUs33(),
+        Aboutus44()
+      ],
     );
   }
 }
