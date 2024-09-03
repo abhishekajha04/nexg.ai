@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nexgai_website/about_us/about_us.dart';
 import 'package:nexgai_website/home_page/home_page.dart';
 
 void main() {
